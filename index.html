@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liverpool FC 2026-27 Men's Team</title>
+    <!-- Link CSS External -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome untuk Ikon Media Sosial -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- 1. INTRO / SPLASH SCREEN -->
+    <div id="intro-screen">
+        <div class="intro-content">
+            <img src="assets/logo-red.png" alt="LFC Logo" class="intro-logo">
+            <h1>LIVERPOOL FC</h1>
+            <p>YOU'LL NEVER WALK ALONE</p>
+            <button id="enter-btn">ENTER WEBSITE</button>
+        </div>
+    </div>
+
+    <!-- MAIN WEBSITE CONTAINER -->
+    <div id="main-content" class="hidden">
+
+        <!-- 2. NAVBAR SECTION -->
+        <header class="navbar">
+            <div class="nav-brand">
+                <img src="assets/logo-white.png" alt="LFC Crest" class="nav-logo">
+                <span class="nav-title">Liverpool FC 2026-27 Men's Team</span>
+            </div>
+            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navMenu">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#socials">Social Media</a></li>
+                    <li><a class="join-nav-link" href="join-all-red.html">Join All Red</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- 3. HOME & ABOUT SECTION (INTEGRATED) -->
+        <section id="home" class="hero-section">
+            <div class="hero-overlay">
+                <h1>YOU'LL NEVER WALK ALONE</h1>
+                <p>Welcome to the official showcase of Liverpool Football Club 2026-27 Season.</p>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="about-container">
+                <div class="about-text">
+                    <h2>ABOUT LIVERPOOL FOOTBALL CLUB</h2>
+                    <p>Founded in 1892 in Liverpool, England, Liverpool Football Club is one of the world's most historic and successful football institutions. Known for its passionate supporters, legendary Anfield Stadium, and iconic red kits, the Reds continue to forge greatness on European and global stages.</p>
+                    <p>With an unwavering spirit of togetherness, tactical brilliance, and world-class squad depth, the 2026-27 campaign represents a thrilling new era under top management.</p>
+                    
+                    <!-- Special Button direct to Anfield Location -->
+                    <a href="https://maps.google.com/?q=Anfield+Stadium+Liverpool" target="_blank" class="anfield-btn">
+                        <i class="fa-solid fa-location-dot"></i> Visit Anfield Stadium (Google Maps)
+                    </a>
+                </div>
+                <div class="about-gallery">
+                    <img src="assets/anfield-ground.jpg" alt="Anfield Stadium" class="about-img">
+                    <img src="assets/anfield-crowd.jpg" alt="Anfield Fans Crowd" class="about-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. TEAM SECTION WITH FILTER TABS AND CAROUSEL -->
+        <section id="team" class="team-section">
+            <h2>OUR SQUAD & MANAGEMENT</h2>
+            <p class="subtitle">Liverpool FC 2026-27 First Team Roster</p>
+
+            <!-- Filter Buttons -->
+            <div class="filter-tabs">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="coach">Head Coach</button>
+                <button class="filter-btn" data-category="fw">Forwards</button>
+                <button class="filter-btn" data-category="mf">Midfielders</button>
+                <button class="filter-btn" data-category="df">Defenders</button>
+                <button class="filter-btn" data-category="gk">Goalkeepers</button>
+            </div>
+
+            <!-- CAROUSEL CONTAINER -->
+            <div class="carousel-wrapper">
+                <button class="carousel-arrow prev-btn" id="prevBtn">&#10094;</button>
+
+                <div class="cards-container" id="cardsContainer">
+                    
+                    <!-- HEAD COACH -->
+                    <div class="player-card" data-category="coach">
+                        <div class="card-img-box">
+                            <img src="assets/players/coach-iraola.webp" alt="Andoni Iraola">
+                        </div>
+                        <div class="card-info">
+                            <span class="player-number">Head Coach</span>
+                            <h3>Andoni Iraola</h3>
+                            <p class="player-role">Head Coach</p>
+                            <span class="flag-icon"><img src="assets/flags/es.svg" alt="Spain flag">Spain</span>
+                        </div>
+                    </div>
+
+                    <!-- FORWARDS -->
+                    <div class="player-card" data-category="fw">
+                        <div class="card-img-box">
+                            <img src="assets/players/fw-isak.webp" alt="Alexander Isak">
+                        </div>
+                        <div class="card-info">
+                            <span class="player-number">#9</span>
+                            <h3>Alexander Isak</h3>
+                            <p class="player-role">Forward</p>
+                            <span class="flag-icon"><img src="assets/flags/se.svg" alt="Sweden flag">Sweden</span>
+                        </div>
+                    </div>
+                    <div class="player-card" data-category="fw">
+                        <div class="card-img-box">
+                            <img src="assets/players/fw-chiesa.webp" alt="Federico Chiesa">
+                        </div>
+                        <div class="card-info">
+                            <span class="player-number">#14</span>
+                            <h3>Federico Chiesa</h3>
+                            <p class="player-role">Forward</p>
+                            <span class="flag-icon"><img src="assets/flags/it.svg" alt="Italy flag">Italy</span>
+                        </div>
+                    </div>
+                    <div class="player-card" data-category="fw">
+                        <div class="card-img-box">
+                            <img src="assets/players/fw-gakpo.webp" alt="Cody Gakpo">
+                        </div>
+                        <div class="card-info">
+                            <span class="player-number">#18</span>
+                            <h3>Cody Gakpo</h3>
+                            <p class="player-role">Forward</p>
+                            <span class="flag-icon"><img src="assets/flags/nl.svg" alt="Netherlands flag">Netherlands</span>
+                        </div>
+                    </div>
+                    <div class="player-card" data-category="fw">
+                        <div class="card-img-box">
+                            <img src="assets/players/fw-ekitike.webp" alt="Hugo Ekitike">
+                        </div>
+                        <div class="card-info">
+                            <span class="player-number">#22</span>
+                            <h3>Hugo Ekitike</h3>
+                            <p class="player-role">Forward</p>
+                            <span class="flag-icon"><img src="assets/flags/fr.svg" alt="France flag">France</span>
+                        </div>
+                    </div>
+                    <div class="player-card" data-category="fw">
+                        <div class="card-img-box">
+                            <img src="assets/players/fw-munoz.webp" alt="Victor Munoz">
+                        </div>
+                        <div class="card-info">
+                            <span class="player-number">#23</span>
+                            <h3>Victor Munoz</h3>
+                            <p class="player-role">Forward</p>
+                            <span class="flag-icon"><img src="assets/flags/es.svg" alt="Spain flag">Spain</span>
+                        </div>
+                    </div>
+                    <div class="player-card" data-category="fw">
+                        <div class="card-img-box">
+                            <img src="assets/players/fw-barcola.webp" alt="Bradley Barcola">
+                        </div>
+                        <div class="card-info">
+                            <span class="player-number">#29</span>
+                            <h3>Bradley Barcola</h3>
+                            <p class="player-role">Forward</p>
+                            <span class="flag-icon"><img src="assets/flags/fr.svg" alt="France flag">France</span>
+                        </div>
+                    </div>
+                    <div class="player-card" data-category="fw">
+                        <div class="card-img-box">
+                            <img src="assets/players/fw-koumas.webp" alt="Lewis Koumas">
+                        </div>
+                        <div class="card-info">
+                            <span class="player-number">#67</span>
+                            <h3>Lewis Koumas</h3>
+                            <p class="player-role">Forward</p>
+                            <span class="flag-icon"><img src="assets/flags/gb-wls.svg" alt="Wales flag">Wales</span>
+                        </div>
+                    </div>
+                    <div class="player-card" data-category="fw">
+                        <div class="card-img-box">
+                            <img src="assets/players/fw-ngumoha.webp" alt="Rio Ngumoha">
+                        </div>
+                        <div class="card-info">
+                            <span class="player-number">#73</span>
+                            <h3>Rio Ngumoha</h3>
+                            <p class="player-role">Forward</p>
+                            <span class="flag-icon"><img src="assets/flags/gb-eng.svg" alt="England flag">England</span>
+                        </div>
+                    </div>
+                    <div class="player-card" data-category="fw">
+                        <div class="card-img-box">
+                            <img src="assets/players/fw-danns.webp" alt="Jayden Danns">
+                        </div>
+                        <div class="card-info">
+                            <span class="player-number">#76</span>
+                            <h3>Jayden Danns</h3>
+                            <p class="player-role">Forward</p>
+                            <span class="flag-icon"><img src="assets/flags/gb-eng.svg" alt="England flag">England</span>
+                        </div>
+                    </div>
+
+                    <!-- MIDFIELDERS -->
+                    <div class="player-card" data-category="mf">
+                        <div class="card-img-box">
+                            <img src="assets/players/mf-endo.webp" alt="Wataru Endo">
+                        </div>
+                        <div class="card-info">
+                            <span class="player-number">#3</span>
+                            <h3>Wataru Endo</h3>
+                            <p class="player-role">Midfielder</p>
+                            <span class="flag-icon"><img src="assets/flags/jp.svg" alt="Japan flag">Japan</span>
+                        </div>
+                    </div>
+                    <div class="player-card" data-category="mf">
+                        <div class="card-img-box">
+                            <img src="assets/players/mf-wirtz.webp" alt="Florian Wirtz">
+                        </div>
+                        <div class="card-info">
+                            <span class="player-number">#7</span>
+                            <h3>Florian Wirtz</h3>
+                            <p class="player-role">Midfielder</p>
+                            <span class="flag-icon"><img src="assets/flags/de.svg" alt="Germany flag">Germany</span>
+                        </div>
+                    </div>
+                    <div class="player-card" data-category="mf">
+                        <div class="card-img-box">
+                            <img src="assets/players/mf-szoboszlai.webp" alt="Dominik Szoboszlai">
+                        </div>
+                        <div class="card-info">
+                            <span class="player-number">#8</span>
+                            <h3>Dominik Szoboszlai</h3>
+                            <p class="player-role">Midfielder</p>
+                            <span class="flag-icon"><img src="assets/flags/hu.svg" alt="Hungary flag">Hungary</span>
+                        </div>
+                    </div>
+                    <div class="player-card" data-category="mf">
+                        <div class="card-img-box">
+                            <img src="assets/players/mf-macallister.webp" alt="Alexis Mac Allister">
+                        </div>
+                        <div class="card-info">
+                            <span class="player-number">#10</span>
+                            <h3>Alexis Mac Allister</h3>
+                            <p class="player-role">Midfielder</p>
+                            <span class="flag-icon"><img src="assets/flags/ar.svg" alt="Argentina flag">Argentina</span>
+                        </div>
+                    </div>
+                    <div class="player-card" data-category="mf">
+                        <div class="card-img-box">
+                            <img src="assets/players/mf-gravenberch.webp" alt="Ryan Gravenberch">
+                        </div>
+                        <div class="card-info">
+                            <span class="player-number">#38</span>
+                            <h3>Ryan Gravenberch</h3>
+                            <p class="player-role">Midfielder</p>
+                            <span class="flag-icon"><img src="assets/flags/nl.svg" alt="Netherlands flag">Netherlands</span>
+                        </div>
+                    </div>
+                    <div class="player-card" data-category="mf">
+                        <div class="card-img-box">
+                            <img src="assets/players/mf-nyoni.webp" alt="Trey Nyoni">
+                        </div>
+                        <div class="card-info">
+                            <span class="player-number">#42</span>
+                            <h3>Trey Nyoni</h3>
+                            <p class="player-role">Midfielder</p>
+                            <span class="flag-icon"><img src="assets/flags/gb-eng.svg" alt="England flag">England</span>
+                        </div>
+                    </div>
+                    <div class="player-card" data-category="mf">
+                        <div class="card-img-box">
+                            <img src="assets/players/mf-mcconnell.webp" alt="James McConnell">
+                        </div>
+                        <div class="card-info">
+                            <span class="player-number">#53</span>
+                            <h3>James McConnell</h3>
+                            <p class="player-role">Midfielder</p>
+                            <span class="flag-icon"><img src="assets/flags/gb-eng.svg" alt="England flag">England</span>
+                        </div>
+                    </div>
+
+                    <!-- DEFENDERS -->
+                    <div class="player-card" data-category="df">
+                        <div class="card-img-box">
+                            <img src="assets/players/df-gomez.webp" alt="Joe Gomez">
+                        </div>
+                        <div class="card-info">
+                            <span class="player-number">#2</span>
+                            <h3>Joe Gomez</h3>
+                            <p class="player-role">Defender</p>
+                            <span class="flag-icon"><img src="assets/flags/gb-eng.svg" alt="England flag">England</span>
+                        </div>
+                    </div>
+                    
+                    <!-- VIRGIL VAN DIJK (CAPTAIN SPECIAL BADGE) -->
+                    <div class="player-card" data-category="df">
+                        <div class="captain-badge">Ⓒ CAPTAIN</div>
+                        <div class="card-img-box">
+                            <img src="assets/players/df-vandijk.webp" alt="Virgil van Dijk">
+                        </div>
+                        <div class="card-info">
+                            <span class="player-number">#4</span>
+                            <h3>Virgil van Dijk</h3>
+                            <p class="player-role">Defender</p>
+                            <span class="flag-icon"><img src="assets/flags/nl.svg" alt="Netherlands flag">Netherlands</span>
+                        </div>
+                    </div>
+
+                    <div class="player-card" data-category="df">
+                        <div class="card-img-box">
+                            <img src="assets/players/df-jacquet.webp" alt="Jeremy Jacquet">
+                        </div>
+                        <div class="card-info">
+                            <span class="player-number">#5</span>
+                            <h3>Jeremy Jacquet</h3>
+                            <p class="player-role">Defender</p>
+                            <span class="flag-icon"><img src="assets/flags/fr.svg" alt="France flag">France</span>
+                        </div>
+                    </div>
+                    <div class="player-card" data-category="df">
+                        <div class="card-img-box">
+                            <img src="assets/players/df-kerkez.webp" alt="Milos Kerkez">
+                        </div>
+                        <div class="card-info">
+                            <span class="player-number">#6</span>
+                            <h3>Milos Kerkez</h3>
+                            <p class="player-role">Defender</p>
+                            <span class="flag-icon"><img src="assets/flags/hu.svg" alt="Hungary flag">Hungary</span>
+                        </div>
+                    </div>
+                    <div class="player-card" data-category="df">
+                        <div class="card-img-box">
+                            <img src="assets/players/df-bradley.webp" alt="Conor Bradley">
+                        </div>
+                        <div class="card-info">
+                            <span class="player-number">#12</span>
+                            <h3>Conor Bradley</h3>
+                            <p class="player-role">Defender</p>
+                            <span class="flag-icon"><img src="assets/flags/gb-nir.svg" alt="Northern Ireland flag">Northern Ireland</span>
+                        </div>
+                    </div>
+                    <div class="player-card" data-category="df">
+                        <div class="card-img-box">
+                            <img src="assets/players/df-leoni.webp" alt="Giovanni Leoni">
+                        </div>
+                        <div class="card-info">
+                            <span class="player-number">#15</span>
+                            <h3>Giovanni Leoni</h3>
+                            <p class="player-role">Defender</p>
+                            <span class="flag-icon"><img src="assets/flags/it.svg" alt="Italy flag">Italy</span>
+                        </div>
+                    </div>
+                    <div class="player-card" data-category="df">
+                        <div class="card-img-box">
+                            <img src="assets/players/df-tsimikas.webp" alt="Kostas Tsimikas">
+                        </div>
+                        <div class="card-info">
+                            <span class="player-number">#21</span>
+                            <h3>Kostas Tsimikas</h3>
+                            <p class="player-role">Defender</p>
+                            <span class="flag-icon"><img src="assets/flags/gr.svg" alt="Greece flag">Greece</span>
+                        </div>
+                    </div>
+                    <div class="player-card" data-category="df">
+                        <div class="card-img-box">
+                            <img src="assets/players/df-frimpong.webp" alt="Jeremie Frimpong">
+                        </div>
+                        <div class="card-info">
+                            <span class="player-number">#30</span>
+                            <h3>Jeremie Frimpong</h3>
+                            <p class="player-role">Defender</p>
+                            <span class="flag-icon"><img src="assets/flags/nl.svg" alt="Netherlands flag">Netherlands</span>
+                        </div>
+                    </div>
+                    <div class="player-card" data-category="df">
+                        <div class="card-img-box">
+                            <img src="assets/players/df-araujo.webp" alt="Ronald Araujo">
+                        </div>
+                        <div class="card-info">
+                            <span class="player-number">#33</span>
+                            <h3>Ronald Araujo</h3>
+                            <p class="player-role">Defender</p>
+                            <span class="flag-icon"><img src="assets/flags/uy.svg" alt="Uruguay flag">Uruguay</span>
+                        </div>
+                    </div>
+                    <div class="player-card" data-category="df">
+                        <div class="card-img-box">
+                            <img src="assets/players/df-chambers.webp" alt="Luke Chambers">
+                        </div>
+                        <div class="card-info">
+                            <span class="player-number">#44</span>
+                            <h3>Luke Chambers</h3>
+                            <p class="player-role">Defender</p>
+                            <span class="flag-icon"><img src="assets/flags/gb-eng.svg" alt="England flag">England</span>
+                        </div>
+                    </div>
+
+                    <!-- GOALKEEPERS -->
+                    <div class="player-card" data-category="gk">
+                        <div class="card-img-box">
+                            <img src="assets/players/gk-alisson.webp" alt="Alisson Becker">
+                        </div>
+                        <div class="card-info">
+                            <span class="player-number">#1</span>
+                            <h3>Alisson Becker</h3>
+                            <p class="player-role">Goalkeeper</p>
+                            <span class="flag-icon"><img src="assets/flags/br.svg" alt="Brazil flag">Brazil</span>
+                        </div>
+                    </div>
+                    <div class="player-card" data-category="gk">
+                        <div class="card-img-box">
+                            <img src="assets/players/gk-mamardashvili.webp" alt="Giorgi Mamardashvili">
+                        </div>
+                        <div class="card-info">
+                            <span class="player-number">#25</span>
+                            <h3>Giorgi Mamardashvili</h3>
+                            <p class="player-role">Goalkeeper</p>
+                            <span class="flag-icon"><img src="assets/flags/ge.svg" alt="Georgia flag">Georgia</span>
+                        </div>
+                    </div>
+                    <div class="player-card" data-category="gk">
+                        <div class="card-img-box">
+                            <img src="assets/players/gk-woodman.webp" alt="Freddie Woodman">
+                        </div>
+                        <div class="card-info">
+                            <span class="player-number">#28</span>
+                            <h3>Freddie Woodman</h3>
+                            <p class="player-role">Goalkeeper</p>
+                            <span class="flag-icon"><img src="assets/flags/gb-eng.svg" alt="England flag">England</span>
+                        </div>
+                    </div>
+                    <div class="player-card" data-category="gk">
+                        <div class="card-img-box">
+                            <img src="assets/players/gk-jaros.webp" alt="Vitezslav Jaros">
+                        </div>
+                        <div class="card-info">
+                            <span class="player-number">#56</span>
+                            <h3>Vitezslav Jaros</h3>
+                            <p class="player-role">Goalkeeper</p>
+                            <span class="flag-icon"><img src="assets/flags/cz.svg" alt="Czechia flag">Czechia</span>
+                        </div>
+                    </div>
+                    <div class="player-card" data-category="gk">
+                        <div class="card-img-box">
+                            <img src="assets/players/gk-davies.webp" alt="Harvey Davies">
+                        </div>
+                        <div class="card-info">
+                            <span class="player-number">#95</span>
+                            <h3>Harvey Davies</h3>
+                            <p class="player-role">Goalkeeper</p>
+                            <span class="flag-icon"><img src="assets/flags/gb-eng.svg" alt="England flag">England</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button class="carousel-arrow next-btn" id="nextBtn">&#10095;</button>
+            </div>
+        </section>
+
+        <!-- 5. SOCIAL MEDIA SECTION -->
+        <section id="socials" class="socials-section">
+            <h2>CONNECT WITH US</h2>
+            <p>Follow Liverpool FC official social media channels worldwide</p>
+            
+            <div class="social-grid">
+                <a href="https://instagram.com/liverpoolfc" target="_blank" class="social-card instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+                <a href="https://tiktok.com/@liverpoolfc" target="_blank" class="social-card tiktok">
+                    <i class="fa-brands fa-tiktok"></i>
+                    <span>TikTok</span>
+                </a>
+                <a href="https://facebook.com/LiverpoolFC" target="_blank" class="social-card facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <span>Facebook</span>
+                </a>
+                <a href="https://youtube.com/user/LiverpoolFC" target="_blank" class="social-card youtube">
+                    <i class="fa-brands fa-youtube"></i>
+                    <span>YouTube</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- 6. FOOTER SECTION -->
+        <footer class="footer">
+            <div class="footer-content">
+                <img src="assets/logo-white.png" alt="LFC White Crest" class="footer-logo">
+                <p>&copy; 2026-2027 Liverpool Football Club. All Rights Reserved.</p>
+                <p class="motto">"You'll Never Walk Alone"</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Link JS External -->
+    <script src="script.js"></script>
+</body>
+</html>

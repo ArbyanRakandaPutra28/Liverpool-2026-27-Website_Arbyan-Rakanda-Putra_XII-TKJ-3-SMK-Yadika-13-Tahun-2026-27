@@ -1,0 +1,524 @@
+/* CSS RESET & GENERAL STYLING */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #ffffff;
+    color: #1a1a1a;
+    overflow-x: hidden;
+}
+
+/* HELPER CLASSES */
+.hidden {
+    display: none !important;
+}
+
+/* 1. INTRO SCREEN STYLING */
+#intro-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('assets/anfield-aerial.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    text-align: center;
+    color: #ffffff;
+}
+
+.intro-content {
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.intro-logo {
+    width: 120px;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.5));
+}
+
+.intro-content h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    color: #fdb813;
+    margin-bottom: 5px;
+}
+
+.intro-content p {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+
+#enter-btn {
+    background-color: #c8102e;
+    color: #ffffff;
+    border: none;
+    padding: 12px 35px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(200, 16, 46, 0.4);
+}
+
+#enter-btn:hover {
+    background-color: #a00c24;
+    transform: translateY(-2px);
+}
+
+/* 2. NAVBAR STYLING (DESKTOP OPTIMIZED) */
+.navbar {
+    background-color: #c8102e;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-logo {
+    height: 42px;
+}
+
+.nav-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #fdb813;
+}
+
+/* 3. HERO & ABOUT SECTION */
+.hero-section {
+    height: 70vh;
+    background: linear-gradient(rgba(200, 16, 46, 0.6), rgba(0,0,0,0.7)), url('assets/anfield-ground.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+}
+
+.hero-overlay h1 {
+    font-size: 3.5rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+    margin-bottom: 10px;
+}
+
+.hero-overlay p {
+    font-size: 1.3rem;
+    color: #fdb813;
+}
+
+.about-section {
+    padding: 80px 50px;
+    background-color: #ffffff;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    color: #c8102e;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.anfield-btn {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: #c8102e;
+    color: #ffffff;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+.anfield-btn:hover {
+    background-color: #a00c24;
+}
+
+.about-gallery {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.about-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* 4. TEAM SECTION & CAROUSEL */
+.team-section {
+    padding: 80px 50px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.team-section h2 {
+    color: #c8102e;
+    font-size: 2.2rem;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.filter-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 35px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background-color: #ffffff;
+    color: #333;
+    border: 2px solid #ddd;
+    padding: 10px 22px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background-color: #c8102e;
+    color: #ffffff;
+    border-color: #c8102e;
+}
+
+/* CAROUSEL CONTAINER & CARDS */
+.carousel-wrapper {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.cards-container {
+    display: flex;
+    gap: 25px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px 5px;
+    scrollbar-width: none; /* Firefox */
+}
+
+.cards-container::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+}
+
+.player-card {
+    min-width: 250px;
+    max-width: 250px;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    position: relative;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.player-card:hover {
+    transform: translateY(-8px);
+}
+
+.card-img-box {
+    width: 100%;
+    height: 280px;
+    background-color: #111;
+}
+
+.card-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-info {
+    padding: 20px;
+    text-align: left;
+}
+
+.player-number {
+    color: #c8102e;
+    font-weight: 800;
+    font-size: 1.1rem;
+}
+
+.card-info h3 {
+    font-size: 1.15rem;
+    margin: 5px 0 2px;
+    color: #1a1a1a;
+}
+
+.player-role {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 8px;
+}
+
+.flag-icon {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #444;
+}
+
+/* VIRGIL VAN DIJK CAPTAIN BADGE */
+.captain-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: #fdb813;
+    color: #000000;
+    font-weight: 800;
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.carousel-arrow {
+    background-color: #ffffff;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background 0.3s;
+}
+
+.carousel-arrow:hover {
+    background-color: #c8102e;
+    color: #fff;
+}
+
+.prev-btn { left: -20px; }
+.next-btn { right: -20px; }
+
+/* 5. SOCIAL MEDIA SECTION */
+.socials-section {
+    padding: 70px 50px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.socials-section h2 {
+    color: #c8102e;
+    margin-bottom: 5px;
+}
+
+.socials-section p {
+    color: #666;
+    margin-bottom: 35px;
+}
+
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.social-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 20px;
+    border-radius: 8px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: transform 0.3s;
+}
+
+.social-card:hover {
+    transform: translateY(-5px);
+    
+}
+
+.instagram { background: linear-gradient(45deg, #f09433, #bc1888); }
+.tiktok { background-color: #000000; }
+.facebook { background-color: #1877f2; }
+.youtube { background-color: #ff0000; }
+
+/* 6. FOOTER STYLING */
+.footer {
+    background-color: #111111;
+    color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-logo {
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.footer p {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.footer .motto {
+    color: #fdb813;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+
+/* 7. COLLAPSIBLE NAVIGATION / HAMBURGER MENU */
+.menu-toggle { display: none; width: 44px; height: 42px; border: 1px solid rgba(255,255,255,.45); border-radius: 7px; background: transparent; cursor: pointer; padding: 9px; }
+.menu-toggle span { display: block; height: 2px; width: 100%; background: #fff; margin: 5px 0; border-radius: 2px; transition: transform .25s ease, opacity .25s ease; }
+.menu-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.menu-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.menu-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.join-nav-link { display: inline-block; background: #fdb813; color: #111 !important; padding: 9px 15px; border-radius: 5px; }
+.join-nav-link:hover { background: #fff; color: #c8102e !important; }
+.join-nav-link.active { outline: 2px solid rgba(255,255,255,.75); }
+.flag-icon { display: inline-flex; align-items: center; gap: 8px; }
+.flag-icon img { display: inline-block; width: 27px; height: 18px; object-fit: cover; border-radius: 2px; box-shadow: 0 1px 3px rgba(0,0,0,.18); }
+
+/* 8. ALL RED REGISTRATION PAGE */
+.join-page { min-height: 100vh; background: #f5f5f5; }
+.join-main { padding: 65px 20px 80px; background: linear-gradient(rgba(17,17,17,.68),rgba(17,17,17,.68)), url('assets/anfield-aerial.jpg') center/cover fixed; }
+.join-card { max-width: 820px; margin: 0 auto; padding: 45px 50px; background: #fff; border-radius: 14px; box-shadow: 0 15px 45px rgba(0,0,0,.25); }
+.join-heading { text-align: center; margin-bottom: 35px; }
+.join-eyebrow { color: #c8102e; font-size: .78rem; font-weight: 800; letter-spacing: 2px; }
+.join-heading h1 { color: #c8102e; font-size: 2.5rem; margin: 8px 0 12px; }
+.join-heading p { color: #555; line-height: 1.7; max-width: 650px; margin: 0 auto; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px 20px; }
+.form-field { min-width: 0; display: flex; flex-direction: column; gap: 8px; border: 0; padding: 0; }
+.form-field label, .form-field legend { color: #222; font-weight: 700; font-size: .95rem; }
+.form-field label span, .form-field legend span, .form-note span { color: #c8102e; }
+.form-field input:not([type="radio"]), .form-field select { width: 100%; min-height: 48px; border: 1px solid #ccc; border-radius: 6px; padding: 11px 13px; color: #222; background: #fff; font: inherit; }
+.form-field input:focus, .form-field select:focus { outline: 2px solid rgba(200,16,46,.2); border-color: #c8102e; }
+.full-width { grid-column: 1 / -1; }
+.gender-field { display: flex; flex-wrap: wrap; flex-direction: row; align-content: flex-start; gap: 10px 16px; }
+.gender-field legend { width: 100%; margin-bottom: 2px; }
+.radio-option { display: inline-flex; align-items: center; gap: 6px; font-weight: 400 !important; }
+.radio-option input { accent-color: #c8102e; }
+.form-note { color: #666; font-size: .85rem; margin: 22px 0 15px; }
+.send-btn { width: 100%; border: 0; border-radius: 6px; padding: 15px 22px; background: #c8102e; color: #fff; font-size: 1rem; font-weight: 800; letter-spacing: 1px; cursor: pointer; transition: background .2s, transform .2s; }
+.send-btn:hover { background: #a00c24; transform: translateY(-2px); }
+.send-btn i { margin-left: 8px; }
+.form-message { min-height: 20px; margin-top: 14px; text-align: center; color: #18733b; font-weight: 600; }
+.demo-notice { margin-top: 12px; color: #777; font-size: .78rem; line-height: 1.5; text-align: center; }
+.back-home { display: inline-block; margin-top: 20px; color: #c8102e; text-decoration: none; font-weight: 700; }
+.back-home:hover { text-decoration: underline; }
+
+/* RESPONSIVE LAYOUT */
+@media (max-width: 900px) {
+    .navbar { padding: 13px 22px; }
+    .menu-toggle { display: block; }
+    .nav-menu { display: none; position: absolute; top: 100%; left: 0; right: 0; background: #b30e29; padding: 12px 22px 20px; box-shadow: 0 8px 12px rgba(0,0,0,.18); }
+    .nav-menu.open { display: block; }
+    .nav-menu ul { flex-direction: column; align-items: stretch; gap: 0; }
+    .nav-menu li { border-bottom: 1px solid rgba(255,255,255,.16); }
+    .nav-menu li:last-child { border-bottom: 0; padding-top: 10px; }
+    .nav-menu a { display: block; padding: 12px 4px; }
+    .nav-menu .join-nav-link { display: inline-block; padding: 10px 15px; }
+    .about-container { flex-direction: column; }
+}
+@media (max-width: 600px) {
+    .navbar { padding: 11px 15px; }
+    .nav-brand { gap: 9px; }
+    .nav-logo { height: 35px; }
+    .nav-title { font-size: .9rem; max-width: 190px; }
+    .hero-overlay h1 { font-size: 2.1rem; }
+    .hero-overlay p { font-size: 1rem; padding: 0 18px; }
+    .about-section, .team-section, .socials-section { padding: 55px 18px; }
+    .about-gallery { grid-template-columns: 1fr; width: 100%; }
+    .carousel-wrapper { padding: 0 8px; }
+    .player-card { min-width: 230px; max-width: 230px; }
+    .prev-btn { left: -4px; }
+    .next-btn { right: -4px; }
+    .join-main { padding: 35px 12px 50px; }
+    .join-card { padding: 30px 20px; }
+    .join-heading h1 { font-size: 2rem; }
+    .form-grid { grid-template-columns: 1fr; }
+    .full-width { grid-column: auto; }
+}
